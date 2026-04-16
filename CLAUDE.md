@@ -113,6 +113,8 @@ See `translators/CLAUDE.md` for guidelines. Key rules: **never** generate transl
 
 This is a personal fork of Zotero with customized PDF annotation tool defaults. When the user asks to change annotation defaults, ask them which tools to change and what color/size to set for each.
 
+The main branch of the fork is `custom-build`. This is also true for the `./reader/` git submodule.
+
 ### Build & Run
 
 ```bash
@@ -140,6 +142,4 @@ Each tool has a `color` (from `ANNOTATION_COLORS` in `reader/src/common/defines.
 
 Allowed text/ink sizes: `6, 8, 10, 12, 14, 18, 24, 36, 48, 64, 72, 96, 144, 192`
 
-The `reader/` directory is a git submodule pointing to `Gattocrucco/reader`. Changes there must be committed in the submodule first, then the updated submodule reference committed in the parent repo.
-
-Reference: https://github.com/zotero/zotero/issues/4439
+Reference issue for Zotero not allowing to change these settings from the UI: https://github.com/zotero/zotero/issues/4439
