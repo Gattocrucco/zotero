@@ -27,8 +27,8 @@
 	url = https://github.com/gildas-lormeau/SingleFile.git
 [submodule "pdf-reader"]
 	path = reader
-	url = https://github.com/zotero/reader.git
-	branch = master
+	url = https://github.com/Gattocrucco/reader.git
+	branch = custom-build
 [submodule "pdf-worker"]
 	path = pdf-worker
 	url = https://github.com/zotero/pdf-worker.git
