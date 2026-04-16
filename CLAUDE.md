@@ -108,3 +108,38 @@ Custom Node.js build system (not Webpack). `js-build/config.js` defines what get
 ## Translators
 
 See `translators/CLAUDE.md` for guidelines. Key rules: **never** generate translators from scratch, **never** generate UUIDs, **never** generate test cases -- all of these must be done through Zotero's Scaffold tool.
+
+## About this fork
+
+This is a personal fork of Zotero with customized PDF annotation tool defaults. When the user asks to change annotation defaults, ask them which tools to change and what color/size to set for each.
+
+### Build & Run
+
+```bash
+app/scripts/build_and_run -r
+```
+
+The finished app ends up in `app/staging/`.
+
+### Annotation tool defaults
+
+The defaults are in `reader/src/common/reader.js`, around line 128 -- the `highlight`, `underline`, `note`, `image` (select area), `text`, `ink` (draw), and `eraser` tool entries.
+
+Each tool has a `color` (from `ANNOTATION_COLORS` in `reader/src/common/defines.js`) and optionally a `size`. The color indices are:
+
+| Index | Color |
+|-------|--------|
+| 0 | yellow |
+| 1 | red |
+| 2 | green |
+| 3 | blue |
+| 4 | purple |
+| 5 | magenta |
+| 6 | orange |
+| 7 | gray |
+
+Allowed text/ink sizes: `6, 8, 10, 12, 14, 18, 24, 36, 48, 64, 72, 96, 144, 192`
+
+The `reader/` directory is a git submodule pointing to `Gattocrucco/reader`. Changes there must be committed in the submodule first, then the updated submodule reference committed in the parent repo.
+
+Reference: https://github.com/zotero/zotero/issues/4439
