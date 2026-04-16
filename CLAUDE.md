@@ -117,6 +117,10 @@ The main branch of the fork is `custom-build`. This is also true for the `./read
 
 ### Build & Run
 
+See the setup instructions at https://www.zotero.org/support/dev/client_coding/building_the_desktop_app
+
+Then, after changing the code, do:
+
 ```bash
 app/scripts/build_and_run -r
 ```
